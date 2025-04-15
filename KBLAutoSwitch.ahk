@@ -1120,7 +1120,7 @@ Cur_Display_KBL(KBL_Flag:=0,CapsLock_Flag:=0,MonitorNum:=0) { ; 显示输入法�
 
 ;-----------------------------------【初始化功能】-----------------------------------------------
 Label_Init_INI: ; 初始化配置文件INI
-	FileAppend,[基本设置]`n, %INI%
+	FileAppend,[基本设置]`n, %INI%, UTF-8 ; 使用utf-8编码，避免乱码问题
 	FileAppend,开机自启=0`n, %INI%
 	FileAppend,管理员启动=1`n, %INI%
 	FileAppend,自动切换=1`n, %INI%
